@@ -85,6 +85,7 @@ list(APPEND ep
     libzvbi
     libaribcaption
     libsixel
+    whisper.cpp
     ffmpeg
     mpv
     mpv-release
