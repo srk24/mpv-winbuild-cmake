@@ -1,6 +1,4 @@
 ExternalProject_Add(whisper.cpp
-    DEPENDS
-        vulkan
     GIT_REPOSITORY https://github.com/ggml-org/whisper.cpp.git
     SOURCE_DIR ${SOURCE_LOCATION}
     GIT_CLONE_FLAGS "--filter=tree:0"
@@ -21,7 +19,6 @@ ExternalProject_Add(whisper.cpp
         -DGGML_AVX2=ON
         -DGGML_FMA=ON
         -DGGML_F16C=ON
-        -DGGML_VULKAN=ON
     BUILD_COMMAND ${EXEC} ninja -C <BINARY_DIR>
     INSTALL_COMMAND ${EXEC} ninja -C <BINARY_DIR> install
     LOG_DOWNLOAD 1 LOG_UPDATE 1 LOG_CONFIGURE 1 LOG_BUILD 1 LOG_INSTALL 1
